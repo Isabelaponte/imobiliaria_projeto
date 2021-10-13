@@ -1,5 +1,10 @@
+<?php 
+    session_start();   
+    include("realizarLogin.php");
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 
@@ -23,7 +28,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Página Inicial</a>
@@ -35,7 +40,7 @@
                             <a class="nav-link" href="#">Entrar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Cadastro</a>
+                            <a class="nav-link" href="cadastro.php">Cadastro</a>
                         </li>
                     </ul>
                 </div>
@@ -50,8 +55,7 @@
     <main role="main" class="text-center">
         <section class="jumbotrom text-center">
             <div class="py-5 text-center">
-                <h1 class="jumbotron-heading">Cadastro</h1>
-                <p class="lead">Cadastre-se e se liberte na imensidão de imóveis ao seu dispor!</p>
+                <h1 class="jumbotron-heading">Entrar</h1>
             </div>
         </section>
     </main>
@@ -59,36 +63,33 @@
     <!--//MAIN-->
 
     <!--CADASTRO-->
-    <form class="needs-validation">
-        <div class="form-group col-6 mx-auto">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" aria-describedby="nome"
-                    placeholder value required>
-            </div>
-            <div class="mb-3">
-                <label for="cpf" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" aria-describedby="cpf"
-                    placeholder value required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email"
-                    placeholder value required>
-            </div>
-            <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder value required>
-            </div>
-            <div class="d-grid gap-2 col-2 mx-auto">
-                <button class="btn btn-outline-dark btn-lg btn-block" type="submit" formaction="#"
-                value="Cadastrar">Cadastrar</button>
-            </div>
-            
+    <section class="py-5 container">
 
-        </div>
+        
 
-    </form>
+        <form action="realizarLogin.php" class="needs-validation" method="POST" >
+            <div class="form-group col-6 mx-auto">
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control" id="email" aria-describedby="email"
+                        placeholder value required>
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input name="senha" type="password" class="form-control" id="senha" placeholder value required>
+                </div>
+                <div class="d-grid gap-2 col-2 mx-auto">
+                    <button class="btn btn-outline-dark btn-lg btn-block" type="submit" formaction="#"
+                    value="Cadastrar">Entrar</button>
+                </div>
+                
+    
+            </div>
+    
+        </form>
+    </section>
+    
 
     <footer class="text-muted">
 		<div class="container">
@@ -104,6 +105,7 @@
 		</div>
 	</footer>
     <!--//CADASTRO-->
+    
     <!--importação js-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
