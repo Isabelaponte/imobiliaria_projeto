@@ -37,7 +37,7 @@
                             <a class="nav-link" href="#">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Entrar</a>
+                            <a class="nav-link" href="entrar.php">Entrar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="cadastro.php">Cadastro</a>
@@ -52,59 +52,16 @@
 
     <!--MAIN-->
 
-    <main role="main" class="text-center">
-        <section class="jumbotrom text-center">
-            <div class="py-5 text-center">
-                <h1 class="jumbotron-heading">Entrar</h1>
+    <main role="main">
+        <section class="jumbotrom container">
+            <div class="py-5 ">
+                <h1 class="jumbotron-heading">Sobre</h1>
+                <p class="lead">O VIJIL é um site de imobiliária criado pelos alunos Isabela de Ponte, Livia Oliveira, Julia Gomes, João Inoue e Vinicius Alves com a finalidade de produzir um projeto para TCC para conclusão do técnico em Desenvolvimento de Sistemas.</p>
             </div>
         </section>
     </main>
 
     <!--//MAIN-->
-
-    <!--CADASTRO-->
-    <section class="py-5 container">
-
-        
-
-        <form action="realizarLogin.php" class="needs-validation" method="POST" >
-            <div class="form-group col-6 mx-auto">
-                
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input name="email" type="email" class="form-control" id="email" aria-describedby="email"
-                        placeholder value required>
-                </div>
-                <div class="mb-3">
-                    <label for="senha" class="form-label">Senha</label>
-                    <input name="senha" type="password" class="form-control" id="senha" placeholder value required>
-                </div>
-                <div class="d-grid gap-2 col-2 mx-auto">
-                    <button class="btn btn-outline-dark btn-lg btn-block" type="submit" formaction="#"
-                    value="Cadastrar">Entrar</button>
-                </div>
-                
-    
-            </div>
-    
-        </form>
-    </section>
-    
-
-    <footer class="text-muted">
-		<div class="container">
-			<p class="float-right">
-				<a href="#">Voltar ao topo</a>
-			</p>
-			<p>
-				Esse é um projeto de exemplo  criado pela turma de Programação Web II do Etim de Desenvolvimento de Sistemas. &copy; Todos os direitos reservados.
-			</p>
-			<p>
-				Visite <a href="https://br.pinterest.com/eucarolsoaress/vsco-girl/" target="_blank">nossa pasta</a> e conheça mais um pouco sobre a estetica de uma VSCO Girl.
-			</p>
-		</div>
-	</footer>
-    <!--//CADASTRO-->
     
     <!--importação js-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"

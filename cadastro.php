@@ -1,6 +1,6 @@
-<?php 
-    session_start();   
-    include("realizarCadastro.php");
+<?php  
+    require_once "classes/usuarios.php";
+    $u = new Usuario;
 ?>
 
 <!doctype html>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="cpf" class="form-label">CPF</label>
-                    <input name="cpf" type="text" class="form-control" id="cpf" aria-describedby="cpf"
+                    <input name="cpf" type="text" class="form-control" id="cpf" aria-describedby="cpf" maxlength="11"
                         placeholder value required>
                 </div>
                 <div class="mb-3">
@@ -98,6 +98,35 @@
             </div>
     
         </form>
+
+    <?php
+    //verificar se clicou no botao
+        if (isset($_POST['nome']))
+        {
+            $nome = addcslashes($_POST['nome']);
+            $cpf = addcslashes($_POST['cpf']);
+            $email = addcslashes($_POST['email']);
+            $senha = addcslashes($_POST['senha']);
+        }
+
+        $u->conectar("imobiliaria_site", "localhost", "root", "");
+        if ($u->msgErro == "") 
+        {
+            if ($u->cadastrar($nome, $cpf, $email, $senha)) 
+            {
+                echo "Cadastrado com sucesso! Acesse para entrar.";
+            }
+            else 
+            {
+                echo "Email já cadastrado!";
+            }
+        }
+        else 
+        {
+            echo "Erro: ".$u->msgErro;
+        }
+    ?>
+
     </section>
     
 
